@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SOLAMI: Social Vision-Language-Action Modeling for Immersive Interaction with 3D Autonomous Characters">
+  <meta name="keywords" content="3D Characters, Multimodal, Embodied Intelligence">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOLAMI: Social Vision-Language-Action Modeling for Immersive Interaction with 3D Autonomous Characters</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://alanjiang98.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://alanjiang98.github.io/solami.github.io/">
+            SOLAMI
+          </a>
+          <a class="navbar-item" href="https://digital-life-project.com/">
+            Digital Life Project
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SOLAMI: Social Vision-Language-Action Modeling for Immersive Interaction with 3D Autonomous Characters</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://alanjiang98.github.io/">Jianping Jiang</a><sup>&dagger; 1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.esukastudio.com/">Weiye Xiao</a><sup>&dagger; 1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/zhengyu-lin-a908aba8/">Zhengyu Lin</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.cn/incareer/in/huaizhong-zhang-801a64260/">Huaizhong Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://alanjiang98.github.io/solami.github.io/">Tianxiang Ren</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://alanjiang98.github.io/solami.github.io/">Yang Gao</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://alanjiang98.github.io/solami.github.io/">Zhiqian Lin</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://caizhongang.com/">Zhongang Cai</a><sup> &Dagger; 1,2,3</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://yanglei.me/">Lei Yang</a><sup> &Dagger; 1,2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup> &Dagger; 3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>SenseTime Research,</span>
+            <span class="author-block"><sup>2</sup>Shanghai AI Laboratory,</span>
+            <span class="author-block"><sup>3</sup>S-Lab, Nanyang Technological University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.04547"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Arxiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=rj0QEdGbSMs"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <figure class="image">
+        <img src="./static/images/teaser_1.png" alt="SOLAMI enables the user to interact with 3D autonomous characters through speech and body language in an immersive VR environment via an end-to-end social vision-language-action model, which is trained on our synthesized multimodal dataset SynMSI.">
+      </figure>
+      <h2 class="subtitle has-text-centered">
+        Overview of SOLAMI pipeline.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Human beings are social animals. How to equip 3D autonomous characters with similar social intelligence that can perceive, understand and interact with humans remains an open yet foundamental problem. 
+          </p>
+          <p>
+            In this paper, we introduce SOLAMI, the first end-to-end Social vision-Language-Action (VLA) Modeling framework for Immersive interaction with 3D autonomous characters. 
+            Specifically, SOLAMI builds 3D autonomous characters from three aspects: (1) Social VLA Architecture: We propose a unified social VLA framework to generate multimodal response (speech and motion) based on the user's multimodal input to drive the character for social interaction. 
+            (2) Interactive Multimodal Data: We present SynMSI, a synthetic multimodal social interaction dataset generated by an automatic pipeline using only existing motion datasets to address the issue of data scarcity. 
+            (3) Immersive VR Interface: We develop a VR interface that enables users to immersively interact with these characters driven by various architectures. Extensive quantitative experiments and user studies demonstrate that our framework leads to more precise and natural character responses (in both speech and motion) that align with user expectations with lower latency.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/cEVkQ10fWh0?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Results. -->
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Future Work</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>Input Modality:</b> For dyadic social interaction, using the user's body motion and speech as input is sufficient. 
+            However, when considering multi-person interaction or interaction involving the environment and objects, 
+            <a href="https://palm-e.github.io/">video</a> or <a href="https://github.com/qizekun/ShapeLLM">dynamic 3D scenes</a> might be a better choice;
+          </p>
+          <p>
+            <b>Data Collection:</b> Our synthetic dataset, SynMSI, enables satisfactory user evaluation results. 
+            However, collecting real-time data of actual dyadic interaction could enable our model to generate more precise and natural body language and speech, 
+            while also supporting duplex streaming conversations, similar to <a href="https://aubrey-ao.github.io/BodyOfHer/">Body of Her</a> or <a href="https://github.com/THUDM/GLM-4-Voice">GLM-4-Voice</a>. 
+            Compared to text and video modalities, the collection of embodied 3D data is undoubtedly challenging. 
+            Potential solutions include: <a href="https://github.com/caizhongang/SMPLer-X">capturing</a> or <a href="https://homangab.github.io/gen2act/">learning human behavioral data</a> from existing video datasets, 
+            building <a href="https://vis.khoury.northeastern.edu/pubs/Saffo2020CrowdsourcingVirtualReality/">immersive interaction platforms</a> to gather data on human interactions, 
+            and using <a href="https://github.com/OpenTeleVision/TeleVision">surrogate control</a> to collect data from human interactions with 3D characters;
+          </p>
+          <p>
+            <b>Cross Embodiment:</b> Using a unified SMPL-X model to represent characters' motion inevitably introduces challenges in cross-embodiment for different characters. 
+             While some degree of error and misalignment may not hinder information exchange in social language interaction, such representations clearly lack generalizability for fine-grained tasks (e.g., handshaking, object manipulation). 
+             The challenges of retargeting in 3D human-related tasks and cross-embodiment in robotics share similarities, providing opportunities for mutual inspiration and methodological exchange;
+          </p>
+          <p>
+            <b>Long-Short Term Design:</b> Although SOLAMI demonstrates effective modeling for real-time interactions, its architecture encounters challenges such as computational redundancy, forgetting, and training difficulties during extended social interactions. 
+            A promising direction (such as <a href="https://arxiv.org/abs/2410.08328">thinking fast and slow</a>) to explore is integrating long-term memory, knowledge, and skills with short-term real-time interaction. 
+            This approach could ensure interaction quality while reducing computational overhead and simplifying the training process;
+          </p>
+          <p>
+            <b>Efficient Learning Method:</b> Although our dataset, SynMSI, tries to collect large-scale motion data, the inherently long-tail distribution of human motions results in some behaviors having very low occurrence frequencies. 
+            In particular, the data volume for signature actions of 3D characters is inherently limited. 
+            While models like <a href="https://openai.com/index/gpt-3-apps/">GPT-3</a> have demonstrated remarkable few-shot learning capabilities, the data-intensive training required is currently unsustainable in the field of digital humans. 
+            Therefore, exploring effective learning methods is essential. 
+            Leveraging character-focused knowledge embedded in existing foundation models or incorporating human evaluators to guide the model in learning new skills from a small number of samples are promising research directions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Acknowledgments</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We extend our sincere gratitude to <a href="https://fxia22.github.io/">Fei Xia</a>, <a href="http://hxu.rocks/">Huazhe Xu</a>, 
+            <a href="https://www.taokong.org/">Tao Kong</a>, <a href="https://huangjy-pku.github.io/">Jiangyong Huang</a> for their insights from the embodied intelligence field. 
+          </p>
+          <p>
+            We thank <a href="https://mingyuan-zhang.github.io/">Mingyuan Zhang</a>, <a href="https://hongfz16.github.io/">Fangzhou Hong</a>, 
+            and <a href="https://scholar.google.com/citations?user=Dv3FKk0AAAAJ">Xinying Guo</a> for discussions on motion generation, 
+            <a href="https://brianboli.com/">Bo Li</a> and <a href="https://zhangyuanhan-ai.github.io/">Yuanhan Zhang</a> for advice on multimodal model training.
+          </p>
+          <p>
+            We would also like to acknowledge <a href="https://www.linkedin.com/in/han-du-9b016ab8/">Han Du</a>, Fanzhou Wang, Jiaqi Li, <a href="https://scholar.google.com/citations?user=lSDISOcAAAAJ">Liang Pan</a>, Peng Gao, and Yukun Wei for insightful discussions on the topic.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Jiang2024EvRGBHand,
+      author    = {Jiang, Jianping and Zhou, Xinyu and Wang, Bingxuan and Deng, Xiaoming and Xu, Chao and Shi, Boxin},
+      title     = {Complementing Event Streams and RGB Frames for Hand Mesh Reconstruction},
+      journal   = {CVPR},
+      year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <!-- <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p> -->
+          <p>
+            The source code of this website is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
